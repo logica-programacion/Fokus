@@ -45,7 +45,12 @@
                 </div>
     
                 <div class="timer-wrapper--button">
-                    <button> INICIAR<!-- BOTAO DINAMICO - PAUSAR OU CONTINUAR --></button>
+                    <button id="timerButton" aria-label="Iniciar Timer"> 
+                        <span aria-hidden="true">
+                            <img src="./assets/images/play_arrow.svg" alt="Ícone de iniciar">
+                        </span> 
+                        Iniciar 
+                    </button>
                     
                 </div>
     
@@ -77,5 +82,6 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/texts.js"></script>
     <script src="assets/js/background.js"></script>
+    <script src="assets/js/timer.js"></script>
 </body>
 </html>
