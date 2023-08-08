@@ -1,0 +1,63 @@
+
+.timer-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: 2rem;
+    
+}
+.timer--navegation-wrapper{
+    border-radius: 2rem;
+    border: 2px solid #144480;
+    background: rgba(20, 68, 128, 0.30);
+    
+    padding: 2rem;
+}
+
+.progress-wrapper--navegation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress {
+    color: #FFF;
+
+    padding: 0.5rem;
+
+    border-radius: 0.5rem;
+    border: 2px solid;
+
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.timer-wrapper--number {
+    color: #FFF;
+    text-align: center;
+
+    font-family: Unbounded;
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+.timer-wrapper--button {
+    display: flex;
+    justify-content: center;
+}
+
+.timer-wrapper--button > button{
+    width: 12rem;
+    padding: 0.5rem;
+
+    text-align: center;
+    color: #FFF;
+
+    border-radius: 2rem;
+    background: var(--linear-botes, linear-gradient(180deg, #B872FF 0%, #144480 100%));
+}

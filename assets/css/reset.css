@@ -23,3 +23,11 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
 }
+
+button {
+    cursor: pointer;
+
+    font-weight: 600;
+    font-family: Montserrat;
+    color:#FFF;
+}
