@@ -1,5 +1,5 @@
 let intervalId;
-let remainingTime = 1500; // 25 MINUTOS IN SECONDS (25 * 60)
+let remainingTime = 1500; // 25 MINUTOS EM SEGUNDOS (25 * 60)
 let timerActive = false
 
 const timeElement = document.getElementById("time");
