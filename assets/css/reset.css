@@ -1,5 +1,7 @@
 /* reset.css */
-
+*{
+    box-sizing: border-box;
+}
 /* Zera as margens e preenchimentos */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
