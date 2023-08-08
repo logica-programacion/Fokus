@@ -1,26 +1,66 @@
+let intervalId;
+let remainingTime = 1500; // 25 MINUTOS IN SECONDS (25 * 60)
+let timerActive = false
+
+const timeElement = document.getElementById("time");
 const timerButton = document.getElementById('timerButton');
-const iconElement = timerButton.querySelector('span');
 
-let isTimerRunning = false;
+function formatTime (time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
 
-const pauseImagePath = '/assets/images/pause.svg';
-const playArrowImagePath = '/assets/images/play_arrow.svg';
 
-timerButton.addEventListener('click', () => {
-    if (isTimerRunning) {
-    
-        iconElement.innerHTML = `<img src="${playArrowImagePath}" alt="Icono de pausar">`;
-        timerButton.textContent = 'Iniciar';
-        console.log('Botao Iniciar');
+    //String = CONVERTE OS MIN E SEC EM STRING
+    //padStart = FORMATAR OS VALORES COM DOIS DIGITOS
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
 
+function updateTimeDisplay() {
+    timeElement.textContent = formatTime(remainingTime);
+}
+
+function toggleTimer() {
+    if (!timerActive) {
+        startTimer();
     } else {
-    
-        iconElement.innerHTML = `<img src="${pauseImagePath}" alt="Icono de pausar">`;
-        timerButton.textContent = 'Pausar';
-        console.log('Botao Pausar');
-    
+        stopTimer();
     }
+}
 
-    isTimerRunning = !isTimerRunning;
-})
+function startTimer() {
+    intervalId = setInterval(() => {
+        remainingTime -= 1;
+        updateTimeDisplay();
 
+        if (remainingTime <= 0) {
+            stopTimer();
+        }
+    }, 1000);
+
+    timerActive = true;
+    timerButton.textContent = "Stop";
+}
+
+function stopTimer() {
+    clearInterval(intervalId);
+    timerActive = false;
+    timerButton.textContent = "Reset";
+}
+
+function resetTimer() {
+    clearInterval(intervalId);
+    remainingTime = 1500;
+    updateTimeDisplay();
+    timerActive = false;
+    timerButton.textContent = "Start";
+}
+
+timerButton.addEventListener("click", () => {
+    if (remainingTime > 0 || timerActive) {
+        toggleTimer();
+    } else {
+        resetTimer();
+    }
+});
+
+updateTimeDisplay();
