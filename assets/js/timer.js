@@ -38,13 +38,13 @@ function startTimer() {
     }, 1000);
 
     timerActive = true;
-    timerButton.textContent = "Stop";
+    timerButton.textContent = "Parar";
 }
 
 function stopTimer() {
     clearInterval(intervalId);
     timerActive = false;
-    timerButton.textContent = "Reset";
+    timerButton.textContent = "Continuar";
 }
 
 function resetTimer() {
@@ -52,7 +52,7 @@ function resetTimer() {
     remainingTime = 1500;
     updateTimeDisplay();
     timerActive = false;
-    timerButton.textContent = "Start";
+    timerButton.textContent = "Iniciar";
 }
 
 timerButton.addEventListener("click", () => {
