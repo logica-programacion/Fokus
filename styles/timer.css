@@ -20,7 +20,6 @@
     padding: 2rem;
 
     height: 100%;
-    max-height: 16rem;
 }
 
 .progress-wrapper--navegation {
@@ -48,8 +47,10 @@
     text-align: center;
 
     font-family: Unbounded;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
+
+    padding: 2rem;
 }
 
 .timer-wrapper--button {
