@@ -11,77 +11,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="images/fokusLogo.svg" alt="Fokus Logo">
-    </header>
 
-    <main>
-        <section class="text-wrapper">
-            <!-- TEXTO DINAMICO -->
-        </section>
+    <div class="container-body">
+        <header class="header">
+            <img src="images/fokusLogo.svg" alt="Fokus Logo">
+        </header>
         
-        <section class="timer-wrapper">
-            <div class="timer--navegation-wrapper">
-                <div class="progress-wrapper--navegation">
-                    <div class="progress progress--focus">
-                        <!-- COR DE FUNDO DINAMICO -->
-                        <p>Enfocar</p>
+        <main class="content">
+            <section class="text-wrapper">
+                <!-- TEXTO DINAMICO -->
+            </section>
+            
+            <section class="timer-wrapper">
+                <div class="timer--navegation-wrapper">
+                    <div class="progress-wrapper--navegation">
+                        <div class="progress progress--focus">
+                            <!-- COR DE FUNDO DINAMICO -->
+                            <p>Enfocar</p>
+                        </div>
+                        
+                        <div class="progress progress--short">
+                            <!-- COR DE FUNDO DINAMICO -->
+                            <p>Corto descanso</p>
+                        </div>
+                        
+                        <div class="progress progress-big">
+                            <!-- COR DE FUNDO DINAMICO -->
+                            <p>Largo descanso</p>
+                        </div>
                     </div>
                     
-                    <div class="progress progress--short">
-                        <!-- COR DE FUNDO DINAMICO -->
-                        <p>Corto descanso</p>
+                    <div class="timer-wrapper--number">
+                        <h1 id="time">
+                        </h1>
+                        <!-- NUMERO DO TIMER DINAMICO -->
                     </div>
                     
-                    <div class="progress progress-big">
-                        <!-- COR DE FUNDO DINAMICO -->
-                        <p>Largo descanso</p>
+                    <div class="timer-wrapper--button">
+                        <button id="timerButton" aria-label="Iniciar Timer"> 
+                            <span aria-hidden="true">
+                                <img src="images/play_arrow.svg" alt="Ícone de iniciar">
+                            </span> 
+                            Iniciar 
+                        </button>
+                    </div>
+                    
+                </div>
+                
+
+                <div class="progress-wrapper--indicator">
+                    <div class="progress--track-focus">
+                        <p>Enfoque completado:</p>
+                        <!-- BOLINHAS DINAMICAS - MAX 4  -->
+                    </div>
+                    <div class="progress--track-short">
+                        <p>Corto descanso:</p>
+                        <!-- BOLINHAS DINAMICAS - MAX 3  -->
+                    </div>
+                    <div class="progress--track-focus">
+                        <p>Largo descanso:</p>
+                        <!-- BOLINHAS DINAMICAS - MAX 1  -->
                     </div>
                 </div>
-    
-                <div class="timer-wrapper--number">
-                    <h1 id="time">
-                    </h1>
-                    <!-- NUMERO DO TIMER DINAMICO -->
-                </div>
-    
-                <div class="timer-wrapper--button">
-                    <button id="timerButton" aria-label="Iniciar Timer"> 
-                        <span aria-hidden="true">
-                            <img src="images/play_arrow.svg" alt="Ícone de iniciar">
-                        </span> 
-                        Iniciar 
-                    </button>
-                </div>
-    
-                </div>
-            </div>
 
-        <div class="progress-wrapper--indicator">
-            <div class="progress--track-focus">
-                <p>Enfoque completado:</p>
-                <!-- BOLINHAS DINAMICAS - MAX 4  -->
-            </div>
-            <div class="progress--track-short">
-                <p>Corto descanso:</p>
-                <!-- BOLINHAS DINAMICAS - MAX 3  -->
-            </div>
-            <div class="progress--track-focus">
-                <p>Largo descanso:</p>
-                <!-- BOLINHAS DINAMICAS - MAX 1  -->
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer>
-        <small>
-            Deserrollado por Alura LATAM
-        </small>
-    </footer>
-    
-    <script src="js/main.js"></script>
-    <script src="js/texts.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/timer.js"></script>
+        <footer class="footer">
+            <p>
+                Deserrollado por Alura LATAM
+            </p>
+        </footer>
+    </div>
+        
+        <script src="js/main.js"></script>
+        <script src="js/texts.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/timer.js"></script>
 </body>
 </html>

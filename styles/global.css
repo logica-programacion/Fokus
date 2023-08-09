@@ -1,27 +1,52 @@
 @import url(./main.css);
 @import url(./timer.css);
 
-body {
+.container-body {
     /* BACKGROUND VAI SER DINAMICO  */
     background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
-    
     background-blend-mode:overlay;
+    
+    display: flex;
+    flex-direction: column; 
+    
+    min-height: 100vh;
+
+}
+
+.header {
+    padding: 1rem;
 
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
+}
 
-    min-height: 100vh;
+.content {
+    flex: 1;
+    padding: 2rem;
 }
 
 h1, 
 h2, 
-h3,
+h3, 
 h4 {
     font-family: 'Unbounded', cursive;
+    font-size: 3rem;
+    color: #FFF;
 }
 
 p {
     font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.footer {
+    width: 100%;
+    padding: 1rem;
+    
+    text-align: center;
+    
+    color: #8B1FF8;
 }
