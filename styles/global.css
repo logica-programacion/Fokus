@@ -1,6 +1,20 @@
 @import url(./main.css);
 @import url(./timer.css);
 
+body {
+    /* BACKGROUND VAI SER DINAMICO  */
+    background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+    
+    background-blend-mode:overlay;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
 h1, 
 h2, 
 h3,
