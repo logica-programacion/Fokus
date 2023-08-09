@@ -17,4 +17,16 @@ main {
     align-items: center;
 
     max-width: 30rem;
+
+    font-size: 2rem;
+}
+
+
+.text-wrapper > h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+.text-wrapper > h1 > span{
+    font-family: 'Unbounded', cursive;
+
 }
