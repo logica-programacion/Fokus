@@ -8,12 +8,12 @@ let shortBreaksTaken = 0
 
 let intervalId
 
+//FUNCTION PARA ATUALIZAR O NUMERO NA TELA
 function updateTimerDisplay () {
     timerElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    console.log(timerElement);
 }
 
-
+//FAZ O TIMER FUNCIONAR
 function startTimer () {
     intervalId = setInterval(() => {
         if (seconds === 0) {
@@ -45,6 +45,7 @@ function startTimer () {
     }, 1000)
 }
 
+// VOLTA PRO INICIO
 function resetTimer () {
     clearInterval(intervalId)
     minutes = 25
