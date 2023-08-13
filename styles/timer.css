@@ -38,12 +38,11 @@
 
     padding: 0.5rem;
 
-    border-radius: 0.5rem;
-    border: 2px solid;
+    border-radius: 0.5rem;   
 
     text-align: center;
     font-size: 1rem;
-    font-weight: 600;
+    
 }
 
 .timer-wrapper--number {

@@ -10,5 +10,5 @@ function changeBackgroundColor(elementSelector, color) {
 
 // Chame a função para alterar as cores de fundo
 changeBackgroundColor('.progress--focus', '#9757FF4D');
-changeBackgroundColor('.progress--short', '#02CDA133');
-changeBackgroundColor('.progress-big', '#1875E9');
+//changeBackgroundColor('.progress--short', '#02CDA133');
+//changeBackgroundColor('.progress-big', '#1875E9');

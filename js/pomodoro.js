@@ -1,58 +1,73 @@
-const timerElement = document.getElementById("timer")
-const timerButton = document.getElementById("timerButton")
+const timerElement = document.getElementById("timer");
+const timerButton = document.getElementById("timerButton");
 
-let minutes = 25
-let seconds = 0
-let currentCyle = 0
-let shortBreaksTaken = 0
-
-let intervalId
+const pomodoroSeconds = 1500;
+const shortBreakSeconds = 300;
+const longBreakSeconds = 900;
+let timer = pomodoroSeconds;
+let isPomodoro = true;
+let shortBreaksTaken = 0;
+let isLongBreak = false;
+let intervalId;
 
 //FUNCTION PARA ATUALIZAR O NUMERO NA TELA
-function updateTimerDisplay () {
-    timerElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+function updateTimerDisplay() {
+    let minutes = Math.floor(timer/60);
+    let seconds = timer % 60;    
+    timerElement.innerHTML = `${pad(minutes)}:${pad(seconds)}`;
+}
+
+function pad(num) {
+    return num < 10 ? '0' + num : '' + num;
 }
 
 //FAZ O TIMER FUNCIONAR
-function startTimer () {
+function startTimer() {
     intervalId = setInterval(() => {
-        if (seconds === 0) {
-            if (minutes === 0) {
-                clearInterval(intervalId)
-
-                if (currentCyle % 4 === 3) {
-                    //LARGO DESCANSO
-                    minutes = 15
-                    currentCyle = 0
-                } else {
-                    minutes = 5
-                    shortBreaksTaken++
-
-                    if (shortBreaksTaken === 3) {
-                        currentCyle++
-                        shortBreaksTaken = 0
-                    }
-                }
-            } else {
-                minutes--
-                seconds = 59
-            }
-        } else {
-            seconds--
+        if (timer === 0) {
+            togglePomodoro(); 
+            return;
         }
 
-        updateTimerDisplay()
+        timer--;
+        updateTimerDisplay();
     }, 1000)
 }
+
+function togglePomodoro() {
+    if (isPomodoro) {
+        isPomodoro = false;
+        console.log('pomodoro');
+
+        if (shortBreaksTaken === 3) {
+            timer = longBreakSeconds;
+            shortBreaksTaken = 0;
+            isLongBreak = true;
+            console.log("pausa longa");
+        }
+        else
+            timer = shortBreakSeconds;
+    }
+    else {
+        isPomodoro = true;
+        timer = pomodoroSeconds;
+        if (!isLongBreak) {
+            shortBreaksTaken++;
+            console.log("1 pausa");
+        }            
+        else 
+            isLongBreak = false;        
+    }
+
+    resetTimer();
+}
+
 
 // VOLTA PRO INICIO
 function resetTimer () {
     clearInterval(intervalId)
-    minutes = 25
-    seconds = 0
-    currentCyle = 0
-    shortBreaksTaken = 0
-
+    timerButton.textContent = "Iniciar"
+    intervalId = null
     updateTimerDisplay()
 }
 
