@@ -1,8 +1,18 @@
 const timerElement = document.getElementById("timer");
 const timerButton = document.getElementById("timerButton");
 
-// const pomodoroSeconds = 1500;
-const pomodoroSeconds = 3;
+function changeBackgroundColor(elementSelector, color) {
+    const elementTimer = document.querySelector(elementSelector);
+
+    if (elementTimer) {
+
+        elementTimer.style.backgroundColor = color;
+        elementTimer.style.borderColor = color;  
+    }
+}
+
+
+const pomodoroSeconds = 1500;
 const shortBreakSeconds = 300;
 const longBreakSeconds = 900;
 
@@ -16,7 +26,7 @@ let intervalId;
 function updateTimerDisplay() {
     let minutes = Math.floor(timer/60);
     let seconds = timer % 60;    
-    
+
     timerElement.innerHTML = `${pad(minutes)}:${pad(seconds)}`;
 }
 
@@ -26,9 +36,11 @@ function pad(num) {
 
 //FAZ O TIMER FUNCIONAR
 function startTimer() {
+
     intervalId = setInterval(() => {
         if (timer === 0) {
             togglePomodoro(); 
+
             return;
         }
 
@@ -37,6 +49,7 @@ function startTimer() {
     }, 1000)
 }
 
+//NUMERO DE POMODOROS
 function togglePomodoro() {
     if (isPomodoro) {
         isPomodoro = false;
@@ -47,9 +60,13 @@ function togglePomodoro() {
             shortBreaksTaken = 0;
             isLongBreak = true;
             console.log("pausa longa");
-        }
-        else
+            
+        } else {
+            
             timer = shortBreakSeconds;
+            console.log("pausa curta");
+        }
+
     }
     else {
         isPomodoro = true;
@@ -87,3 +104,7 @@ timerButton.addEventListener("click", () => {
 
 //INICIALIZAR
 updateTimerDisplay()
+
+changeBackgroundColor('.progress--focus', '#9757FF4D');
+changeBackgroundColor('.progress-big', '#1875E9');
+changeBackgroundColor('.progress--short', '#02CDA133');

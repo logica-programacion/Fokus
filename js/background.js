@@ -1,14 +1,13 @@
 // Função para alterar a cor de fundo de um elemento
-function changeBackgroundColor(elementSelector, color) {
-    const element = document.querySelector(elementSelector);
-    
-    if (element) {
-        element.style.backgroundColor = color;
-        element.style.borderColor = color;  
-    }
-}
+// export function changeBackgroundColor(elementSelector, color) {
+//     const elementTimer = document.querySelector(elementSelector);
+
+//     if (elementTimer) {
+//         elementTimer.style.backgroundColor = color;
+//         elementTimer.style.borderColor = color;  
+//     }
+// }
 
 // Chame a função para alterar as cores de fundo
-changeBackgroundColor('.progress--focus', '#9757FF4D');
-//changeBackgroundColor('.progress--short', '#02CDA133');
-//changeBackgroundColor('.progress-big', '#1875E9');
+// changeBackgroundColor('.progress--short', '#02CDA133');
+// changeBackgroundColor('.progress-big', '#1875E9');
