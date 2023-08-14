@@ -1,9 +1,11 @@
 const timerElement = document.getElementById("timer");
 const timerButton = document.getElementById("timerButton");
 
-const pomodoroSeconds = 1500;
+// const pomodoroSeconds = 1500;
+const pomodoroSeconds = 3;
 const shortBreakSeconds = 300;
 const longBreakSeconds = 900;
+
 let timer = pomodoroSeconds;
 let isPomodoro = true;
 let shortBreaksTaken = 0;
@@ -14,6 +16,7 @@ let intervalId;
 function updateTimerDisplay() {
     let minutes = Math.floor(timer/60);
     let seconds = timer % 60;    
+    
     timerElement.innerHTML = `${pad(minutes)}:${pad(seconds)}`;
 }
 
