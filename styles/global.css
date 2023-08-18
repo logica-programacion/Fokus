@@ -3,17 +3,40 @@
 @import url(./progress.css);
 @import url(./scrollbar.css);
 
+
+
 .container-body {
-    /* BACKGROUND VAI SER DINAMICO  */
-    background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
-    background-blend-mode:overlay;
-    
+
     display: flex;
     flex-direction: column; 
     
     min-height: 100vh;
 
 }
+
+/* BACKGROUND DINAMICO  */
+.smooth-transition {
+    transition: background-color 500ms ease-in-out ;
+}
+
+#selected-focus {
+        background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+        background-blend-mode:overlay;
+        
+
+}
+
+#selected-short {
+        background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%);
+        background-blend-mode:overlay;
+}
+
+#selected-long {
+        background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+        background-blend-mode:overlay;
+}
+
+
 
 .header {
     padding: 1rem;

@@ -1,3 +1,4 @@
+
 main {
     /* background-color: aqua;  */
     /*APAGAR DEPOIS ESSE BACKGROUND*/
@@ -10,6 +11,8 @@ main {
 
     padding: 2rem;
 }
+
+
 
 .text-wrapper {
     display: flex;

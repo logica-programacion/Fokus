@@ -2,13 +2,18 @@
 const timerElement = document.getElementById("timer");
 const timerButton = document.getElementById("timerButton");
 
+const bodyElement = document.body;
+
 // ALTERAR COR DE FUNDO
-function changeBackgroundColor(elementSelector, color) {
+function changeBackgroundColor(elementSelector, color, idName) {
     const elementTimer = document.querySelector(elementSelector);
 
     if (elementTimer) {
         elementTimer.style.backgroundColor = color;
         elementTimer.style.borderColor = color;  
+        elementTimer.classList.add('smooth-transition'); // ADICIONA O smooth-transition class
+
+        bodyElement.id = idName;
     }
 }
 
@@ -51,11 +56,11 @@ function updateTimerDisplay() {
 
     // Adicionar as chamadas de callback para mudar as cores dos elementos de progresso aqui
     if (isPomodoro) {
-        changeBackgroundColor('.progress--focus', '#9757FF4D'); // Mudança de cor de foco durante Pomodoro
+        changeBackgroundColor('.progress--focus', '#9757FF4D', 'selected-focus'); // Mudança de cor de foco durante Pomodoro
     } else if (isLongBreak) {
-        changeBackgroundColor('.progress-big', '#1875E9'); // Mudança de cor durante pausa longa
+        changeBackgroundColor('.progress-big', '#1875E9', 'selected-long'); // Mudança de cor durante pausa longa
     } else {
-        changeBackgroundColor('.progress--short', '#02CDA133'); // Mudança de cor durante pausa curta
+        changeBackgroundColor('.progress--short', '#02CDA133', 'selected-short'); // Mudança de cor durante pausa curta
     }
 
 }
@@ -152,7 +157,3 @@ timerButton.addEventListener("click", () => {
 
 //INICIALIZAR
 updateTimerDisplay()
-
-// changeBackgroundColor('.progress--focus', '#9757FF4D');
-// changeBackgroundColor('.progress-big', '#1875E9');
-// changeBackgroundColor('.progress--short', '#02CDA133');
