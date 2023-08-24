@@ -1,7 +1,0 @@
-.progress-wrapper--indicator {
-    color: #fff;    
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;       
-    font-weight: 400;
-}
