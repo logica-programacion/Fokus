@@ -24,7 +24,6 @@ main {
     font-family: 'Unbounded', cursive;
 
 }
-
 ::-webkit-scrollbar {
     width: 0; /* Hide the scrollbar */
 }
