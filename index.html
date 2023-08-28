@@ -11,80 +11,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="smooth-transition">
+<body>
 
     <div class="container-body">
         <header class="header">
             <img src="images/fokusLogo.svg" alt="Fokus Logo">
-        </header>
-        
+        </header>        
         <main class="content">
             <section class="text-wrapper">
-                <!-- TEXTO DINAMICO -->
+               <h1>Optimiza tu productividad, <span>sumérgete en lo que importa.</span></h1>
             </section>
             
             <section class="timer-wrapper" >
                 <div class="timer--navegation-wrapper">
                     <div class="progress-wrapper--navegation">
-                        <div class="progress progress--focus">
-                            <!-- COR DE FUNDO DINAMICO -->
+                        <div class="progress progress--focus" id="focus">                            
                             <p>Enfocar</p>
                         </div>
                         
-                        <div class="progress progress--short">
-                            <!-- COR DE FUNDO DINAMICO -->
+                        <div class="progress" id="short-break">                            
                             <p>Corto descanso</p>
                         </div>
                         
-                        <div class="progress progress-big">
-                            <!-- COR DE FUNDO DINAMICO -->
+                        <div class="progress" id="long-break">                           
                             <p>Largo descanso</p>
                         </div>
                     </div>
                     
                     <div class="timer-wrapper--number">
-                        <h1 id="timer">25:00</h1>
-                        <!-- NUMERO DO TIMER DINAMICO -->
+                        <h1 id="timer"></h1>                        
                     </div>
                     
                     <div class="timer-wrapper--button">
-                        <button id="timerButton" aria-label="Iniciar Timer"> 
-                            <span aria-hidden="true">
-                                <img src="images/play_arrow.svg" alt="Ícone de iniciar">
-                            </span> 
-                            Iniciar 
+                        <button id="timerButton" aria-label="Iniciar Timer">   
+                            Iniciar      
                         </button>
-                    </div>
-                    
-                </div>
-                
-
-                <div class="progress-wrapper--indicator">
-                    <div class="progress--track-focus">
-                        <p>Enfoque completado:</p>
-                        <!-- BOLINHAS DINAMICAS - MAX 4  -->
-                    </div>
-                    <div class="progress--track-short">
-                        <p>Corto descanso:</p>
-                        <!-- BOLINHAS DINAMICAS - MAX 3  -->
-                    </div>
-                    <div class="progress--track-focus">
-                        <p>Largo descanso:</p>
-                        <!-- BOLINHAS DINAMICAS - MAX 1  -->
-                    </div>
-                </div>
+                    </div>                    
+                </div>  
 
             </section>
         </main>
-
         <footer class="footer">
             <p>
                 Desarrollado por Alura LATAM
             </p>
         </footer>
-    </div>
-        
-        <script type="module" src="js/main.js"></script>
+    </div>             
         <script type="module" src="js/pomodoro.js"></script>
         <script type="module" src="js/texts.js"></script>
 </body>

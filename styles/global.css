@@ -3,44 +3,19 @@
 @import url(./progress.css);
 @import url(./scrollbar.css);
 
-
-
 .container-body {
-
     display: flex;
-    flex-direction: column; 
-    
+    flex-direction: column;     
     min-height: 100vh;
-
 }
 
-/* BACKGROUND DINAMICO  */
-.smooth-transition {
-    transition: background-color 500ms ease-in-out ;
+body {
+    background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+    background-blend-mode:overlay;
 }
-
-#selected-focus {
-        background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
-        background-blend-mode:overlay;
-        
-
-}
-
-#selected-short {
-        background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%);
-        background-blend-mode:overlay;
-}
-
-#selected-long {
-        background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
-        background-blend-mode:overlay;
-}
-
-
 
 .header {
     padding: 1rem;
-
     display: flex;
     justify-content: center;
 }
@@ -50,10 +25,7 @@
     padding: 2rem;
 }
 
-h1, 
-h2, 
-h3, 
-h4 {
+h1, h2, h3, h4 {
     font-family: 'Unbounded', cursive;
     color: #FFF;
 }
@@ -68,9 +40,7 @@ img {
 
 .footer {
     width: 100%;
-    padding: 1rem;
-    
-    text-align: center;
-    
+    padding: 1rem;    
+    text-align: center;    
     color: #8B1FF8;
 }

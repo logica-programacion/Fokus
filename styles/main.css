@@ -1,35 +1,29 @@
-
 main {
-    /* background-color: aqua;  */
-    /*APAGAR DEPOIS ESSE BACKGROUND*/
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
-
     padding: 2rem;
 }
-
-
 
 .text-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-
     max-width: 30rem;
-
     font-size: 2rem;
 }
-
 
 .text-wrapper > h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
 }
+
 .text-wrapper > h1 > span{
     font-family: 'Unbounded', cursive;
 
+}
+::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
 }

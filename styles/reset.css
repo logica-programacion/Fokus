@@ -1,24 +1,20 @@
-/* reset.css */
 *{
     box-sizing: border-box;
 }
-/* Zera as margens e preenchimentos */
+
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Zera os estilos da lista */
 ul, li {
     list-style: none;
 }
 
-/* Zera a formatação do link */
 a {
     text-decoration: none;
 }
 
-/* Define fonte e cor padrão */
 body {
     font-family: Arial, sans-serif;
     color: #333;
