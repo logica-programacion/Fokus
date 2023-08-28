@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fokus</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-body">
+        <header class="header">
+            <img src="images/fokusLogo.svg" alt="Fokus Logo">
+        </header>        
+        <main class="content">
+            <section class="text-wrapper">
+               <h1>Optimiza tu productividad, <span>sumérgete en lo que importa.</span></h1>
+            </section>
+            
+            <section class="timer-wrapper" >
+                <div class="timer--navegation-wrapper">
+                    <div class="progress-wrapper--navegation">
+                        <div class="progress progress--focus" id="focus">                            
+                            <p>Enfocar</p>
+                        </div>
+                        
+                        <div class="progress" id="short-break">                            
+                            <p>Corto descanso</p>
+                        </div>
+                        
+                        <div class="progress" id="long-break">                           
+                            <p>Largo descanso</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timer-wrapper--number">
+                        <h1 id="timer"></h1>                        
+                    </div>
+                    
+                    <div class="timer-wrapper--button">
+                        <button id="timerButton" aria-label="Iniciar Timer">   
+                            Iniciar      
+                        </button>
+                    </div>                    
+                </div>  
+
+            </section>
+        </main>
+        <footer class="footer">
+            <p>
+                Desarrollado por Alura LATAM
+            </p>
+        </footer>
+    </div>             
+        <script type="module" src="js/pomodoro.js"></script>
+        <script type="module" src="js/texts.js"></script>
+</body>
+</html>

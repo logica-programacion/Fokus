@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+button {
+    cursor: pointer;
+
+    font-weight: 600;
+    font-family: Montserrat;
+    color:#FFF;
+}
