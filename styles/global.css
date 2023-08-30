@@ -9,13 +9,11 @@
     align-items: center;
     justify-content: center;
 
-    height: 100vh;
-}
-
-body {
+    min-height: 100vh;
     background: url(/images/background-lines.png) no-repeat 50% / cover, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
     background-blend-mode:overlay;
 }
+
 
 .header {
     padding: 1rem;
@@ -29,7 +27,9 @@ body {
     padding: 2rem;
     display: flex;
     align-items: center;
-    margin: 7rem 0;
+    
+    margin: 4rem auto;
+
 }
 
 h1, h2, h3, h4 {
@@ -50,4 +50,6 @@ img {
     padding: 1rem;    
     text-align: center;    
     color: #8B1FF8;
+
+
 }
